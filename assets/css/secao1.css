@@ -1,0 +1,502 @@
+
+
+/* Hero section - Seção principal */
+        .hero {
+            width: 100%;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            background: linear-gradient(to bottom,  #09DFAB -0%, #001356 70%, #0f172a44 100% );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Adiciona um elemento de vidro desfocado */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.05);
+            backdrop-filter: blur(189.2px);
+            -webkit-backdrop-filter: blur(189.2px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Container central - Mantém os elementos organizados */
+        .container-central {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ícone de vídeo central */
+        .icone-video {
+            width: 333px; /* Reduzido para ficar menor que o retângulo 1 */
+            height: 183px; /* Mantendo a proporção original */
+            background-color: #aaa; /* Cor cinza para o ícone de vídeo */
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Triângulo de play dentro do ícone de vídeo */
+        .icone-video::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent; /* Reduzido para o tamanho original */
+            border-bottom: 15px solid transparent; /* Reduzido para o tamanho original */
+            border-left: 25px solid white; /* Reduzido para o tamanho original */
+            margin-left: 5px; /* Reduzido para o tamanho original */
+        }
+
+        /* Retângulos ao redor do centro (camadas) */
+        .retangulo {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px; /* Retângulos com cantos arredondados */
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+        
+        /* Media query para telas maiores que notebooks de 15 polegadas */
+        @media (min-width: 1367px) {
+            .retangulo-1 {
+                width: 59.65rem; /* Aumentado em 40% de 42.61rem */
+                height: 36.02rem; /* Aumentado em 40% de 25.73rem */
+            }
+
+            .retangulo-2 {
+                width: 70.76rem; /* Aumentado em 40% de 50.54rem */
+                height: 44.10rem; /* Aumentado em 40% de 31.50rem */
+            }
+
+            .retangulo-3 {
+                width: 81.89rem; /* Aumentado em 40% de 58.49rem */
+                height: 51.21rem; /* Aumentado em 40% de 36.58rem */
+            }
+            
+            .retangulo-4 {
+                width: 93.30rem; /* Aumentado em 40% de 66.64rem */
+                height: 60.47rem; /* Aumentado em 40% de 43.19rem */
+            }
+
+            .quadrado-icone {
+                width: 81px; /* Aumentado em 40% do novo tamanho de 58px */
+                height: 81px; /* Aumentado em 40% do novo tamanho de 58px */
+                font-size: 49px; /* Aumentado em 40% do novo tamanho de 35px */
+            }
+
+            .icone-video {
+                width: 448px; /* Reduzido em 20% de 560px */
+                height: 246px; /* Reduzido em 20% de 308px */
+            }
+            
+            /* Triângulo de play dentro do ícone de vídeo */
+            .icone-video::after {
+                border-top: 25px solid transparent; /* Aumentado em 40% de 18px */
+                border-bottom: 25px solid transparent; /* Aumentado em 40% de 18px */
+                border-left: 42px solid white; /* Aumentado em 40% de 30px */
+                margin-left: 8px; /* Aumentado em 40% de 6px */
+            }
+            
+            /* Ajuste dos ícones para telas grandes */
+            .icone-lapis-retangulo3 {
+                margin: -36px 0 0 244px; /* Aumentado em 40% de -26px e 174px */
+            }
+            
+            .icone-telefone-retangulo3 {
+                margin: -84px -36px 0 0; /* Aumentado em 40% de -60px e -26px */
+            }
+            
+            .icone-olho-retangulo3 {
+                margin: 0 118px -36px 0; /* Aumentado em 40% de 84px e -26px */
+            }
+            
+            .icone-planilhas-retangulo3 {
+                margin: 269px 0 0 -36px; /* Aumentado em 40% de 192px e -26px */
+            }
+            
+            .icone-nuvem-retangulo2 {
+                margin: -36px 0 0 403px; /* Aumentado em 40% de -26px e 288px */
+            }
+            
+            .icone-pessoa-retangulo2 {
+                margin: -134px 0 0 -36px; /* Aumentado em 40% de -96px e -26px */
+            }
+            
+            .icone-predio-retangulo2 {
+                margin: 0 0 -36px -185px; /* Aumentado em 40% de -26px e -132px */
+            }
+            
+            .icone-notebook-retangulo1 {
+                margin: -36px 0 0 67px; /* Aumentado em 40% de -26px e 48px */
+            }
+            
+            .icone-ramificacao-retangulo1 {
+                margin: 50px -36px 0 0; /* Aumentado em 40% de 36px e -26px */
+            }
+            
+            .icone-bancodedados-retangulo1 {
+                margin: 0 0 -36px 252px; /* Aumentado em 40% de -26px e 180px */
+            }
+            
+            .icone-particulas-retangulo1 {
+                margin: 134px 0 0 -36px; /* Aumentado em 40% de 96px e -26px */
+            }
+        }
+
+        .retangulo-1 {
+            width: 35.51rem; /* Reduzido para o tamanho original */
+            height: 21.44rem; /* Reduzido para o tamanho original */
+            border: 2px solid #ffffff;
+            border-radius: 16px;
+        }
+
+        .retangulo-2 {
+            width: 42.12rem; /* Reduzido para o tamanho original */
+            height: 26.25rem; /* Reduzido para o tamanho original */
+            border: 2px solid #ffffff60;
+            border-radius: 16px;
+        }
+
+        .retangulo-3 {
+            width: 48.74rem; /* Reduzido para o tamanho original */
+            height: 30.48rem; /* Reduzido para o tamanho original */
+            border: 2px solid #ffffff30;
+            border-radius: 16px;
+        }
+        
+        .retangulo-4 {
+            width: 55.53rem; /* Reduzido para o tamanho original */
+            height: 35.99rem; /* Reduzido para o tamanho original */
+            border: 2px solid #ffffff05;
+            border-radius: 16px;
+        }
+
+        /* Quadrados com ícones */
+        .quadrado-icone {
+            width: 48px; /* Reduzido para o tamanho original */
+            height: 48px; /* Reduzido para o tamanho original */
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            font-size: 29px; /* Reduzido para o tamanho original */
+            transition: all 0.3s ease; /* Transição suave para responsividade */
+        }
+
+        /* Posicionamento fixo do ícone de lápis no retangulo 3 */
+        .icone-lapis-retangulo3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: none;
+            z-index: 6;
+            margin: -22px 0 0 145px; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de telefone na lateral direita do retangulo 3 */
+        .icone-telefone-retangulo3 {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 6;
+            margin: -50px -22px 0 0; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de olho na parte inferior direita do retangulo 3 */
+        .icone-olho-retangulo3 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: none;
+            z-index: 6;
+            margin: 0 70px -22px 0; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de planilhas na lateral esquerda do retangulo 3 */
+        .icone-planilhas-retangulo3 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 6;
+            margin: 160px 0 0 -22px; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de nuvem na parte superior do retangulo 2 */
+        .icone-nuvem-retangulo2 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            margin: -22px 0 0 240px; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de pessoa na parte esquerda do retangulo 2 */
+        .icone-pessoa-retangulo2 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 5;
+            margin: -80px 0 0 -22px; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de prédio na parte inferior do retangulo 2 */
+        .icone-predio-retangulo2 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            margin: 0 0 -22px -110px; /* Reduzido para o tamanho original */
+        }
+        
+        /* Posicionamento fixo do ícone de notebook na parte superior do retangulo 1 */
+        .icone-notebook-retangulo1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            margin: -22px 0 0 40px; /* Reduzido para o tamanho original */
+        }
+        
+        .icone-ramificacao-retangulo1 {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 5;
+            margin: 30px -22px 0 0; /* Reduzido para o tamanho original */
+        }
+        
+        .icone-bancodedados-retangulo1 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            margin: 0 0 -22px 150px; /* Reduzido para o tamanho original */
+        }
+        
+        .icone-particulas-retangulo1 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 5;
+            margin: 80px 0 0 -22px; /* Reduzido para o tamanho original */
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .retangulo-1 {
+                width: 31.96rem; /* Aumentado em 20% de 26.63rem */
+                height: 19.30rem; /* Aumentado em 20% de 16.08rem */
+                border: 2px solid #ffffff;
+                border-radius: 16px;
+            }
+
+            .retangulo-2 {
+                width: 37.91rem; /* Aumentado em 20% de 31.59rem */
+                height: 23.63rem; /* Aumentado em 20% de 19.69rem */
+                border: 2px solid #ffffff60;
+                border-radius: 16px;
+            }
+
+            .retangulo-3 {
+                width: 43.87rem; /* Aumentado em 20% de 36.56rem */
+                height: 27.43rem; /* Aumentado em 20% de 22.86rem */
+                border: 2px solid #ffffff30;
+                border-radius: 16px;
+            }
+            
+            .retangulo-4 {
+                width: 49.98rem; /* Aumentado em 20% de 41.65rem */
+                height: 32.39rem; /* Aumentado em 20% de 26.99rem */
+                border: 2px solid #ffffff05;
+                border-radius: 16px;
+            }
+
+            .quadrado-icone {
+                width: 46px; /* Ajustado para tablet */
+                height: 46px; /* Ajustado para tablet */
+                font-size: 18px; /* Ajustado para tablet */
+            }
+
+            .icone-video {
+                width: 300px; /* Reduzido para manter proporção com o retângulo 1 */
+                height: 165px; /* Mantendo a proporção original */
+            }
+            
+            /* Ajuste do ícone de lápis para tablet */
+            .icone-lapis-retangulo3 {
+                margin: -26px 0 0 131px; /* Aumentado em 20% de -22px e 109px */
+            }
+            
+            /* Ajuste do ícone de telefone para tablet */
+            .icone-telefone-retangulo3 {
+                margin: -46px -26px 0 0; /* Aumentado em 20% de -38px e -22px */
+            }
+            
+            /* Ajuste do ícone de olho para tablet */
+            .icone-olho-retangulo3 {
+                margin: 0 64px -26px 0; /* Aumentado em 20% de 53px e -22px */
+            }
+            
+            /* Ajuste do ícone de planilhas para tablet */
+            .icone-planilhas-retangulo3 {
+                margin: 144px 0 0 -26px; /* Aumentado em 20% de 120px e -22px */
+            }
+            
+            /* Ajuste do ícone de nuvem para tablet */
+            .icone-nuvem-retangulo2 {
+                margin: -26px 0 0 0; /* Aumentado em 20% de -22px */
+            }
+            
+            /* Ajuste do ícone de notebook para tablet */
+            .icone-notebook-retangulo1 {
+                margin: -26px 0 0 36px; /* Aumentado em 20% de -22px e 30px */
+            }
+            
+            /* Ajuste do ícone de ramificação para tablet */
+            .icone-ramificacao-retangulo1 {
+                margin: 0 -20px 0 0; /* Aumentado em 20% de -17px */
+            }
+            
+            /* Ajuste do ícone de banco de dados para tablet */
+            .icone-bancodedados-retangulo1 {
+                margin: 0 0 -20px 134px; /* Aumentado em 20% de -17px e 112px */
+            }
+            
+            /* Ajuste do ícone de partículas para tablet */
+            .icone-particulas-retangulo1 {
+                margin: 72px 0 0 -20px; /* Aumentado em 20% de 60px e -17px */
+            }
+            
+            /* Ajuste do ícone de pessoa para tablet */
+            .icone-pessoa-retangulo2 {
+                margin: -72px 0 0 -26px; /* Aumentado em 20% de -60px e -22px */
+            }
+            
+            /* Ajuste do ícone de prédio para tablet */
+            .icone-predio-retangulo2 {
+                margin: 0 0 -26px -114px; /* Aumentado em 20% de -22px e -95px */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .retangulo-1 {
+                width: 17.04rem; /* Reduzido em 60% de 42.61rem */
+                height: 10.29rem; /* Reduzido em 60% de 25.73rem */
+                border: 2px solid #ffffff;
+                border-radius: 16px;
+            }
+
+            .retangulo-2 {
+                width: 20.22rem; /* Reduzido em 60% de 50.54rem */
+                height: 12.60rem; /* Reduzido em 60% de 31.50rem */
+                border: 2px solid #ffffff60;
+                border-radius: 16px;
+            }
+
+            .retangulo-3 {
+                width: 23.40rem; /* Reduzido em 60% de 58.49rem */
+                height: 14.63rem; /* Reduzido em 60% de 36.58rem */
+                border: 2px solid #ffffff30;
+                border-radius: 16px;
+            }
+            
+            .retangulo-4 {
+                width: 26.66rem; /* Reduzido em 60% de 66.64rem */
+                height: 17.28rem; /* Reduzido em 60% de 43.19rem */
+                border: 2px solid #ffffff05;
+                border-radius: 16px;
+            }
+
+            .quadrado-icone {
+                width: 15px; /* Reduzido ainda mais */
+                height: 15px; /* Reduzido ainda mais */
+                font-size: 9px; /* Reduzido ainda mais */
+            }
+
+            .icone-video {
+                width: 160px; /* Reduzido em 60% de 400px */
+                height: 88px; /* Reduzido em 60% de 220px */
+            }
+
+            /* Ajuste do ícone de lápis para mobile */
+            .icone-lapis-retangulo3 {
+                margin: -10px 0 0 35px; /* Reduzido em 60% de -26px e 87px */
+            }
+            
+            /* Ajuste do ícone de telefone para mobile */
+            .icone-telefone-retangulo3 {
+                margin: -24px -10px 0 0; /* Reduzido em 60% de -60px e -26px */
+            }
+            
+            /* Ajuste do ícone de olho para mobile */
+            .icone-olho-retangulo3 {
+                margin: 0 17px -10px 0; /* Reduzido em 60% de 42px e -26px */
+            }
+            
+            /* Ajuste do ícone de planilhas para mobile */
+            .icone-planilhas-retangulo3 {
+                margin: 38px 0 0 -10px; /* Reduzido em 60% de 96px e -26px */
+            }
+            
+            /* Ajuste do ícone de nuvem para mobile */
+            .icone-nuvem-retangulo2 {
+                margin: -10px 0 0 58px; /* Reduzido em 60% de -26px e 144px */
+            }
+            
+            /* Ajuste do ícone de notebook para mobile */
+            .icone-notebook-retangulo1 {
+                margin: -10px 0 0 10px; /* Reduzido em 60% de -26px e 24px */
+            }
+            
+            /* Ajuste do ícone de ramificação para mobile */
+            .icone-ramificacao-retangulo1 {
+                margin: 0 -5px 0 0; /* Reduzido em 60% de -13px */
+            }
+            
+            /* Ajuste do ícone de banco de dados para mobile */
+            .icone-bancodedados-retangulo1 {
+                margin: 0 0 -5px 36px; /* Reduzido em 60% de -13px e 90px */
+            }
+            
+            /* Ajuste do ícone de partículas para mobile */
+            .icone-particulas-retangulo1 {
+                margin: 19px 0 0 -5px; /* Reduzido em 60% de 48px e -13px */
+            }
+            
+            /* Ajuste do ícone de pessoa para mobile */
+            .icone-pessoa-retangulo2 {
+                margin: -19px 0 0 -8px; /* Reduzido em 60% de -48px e -20px */
+            }
+            
+            /* Ajuste do ícone de prédio para mobile */
+            .icone-predio-retangulo2 {
+                margin: 0 0 -8px -41px; /* Reduzido em 60% de -20px e -102px */
+            }
+
+        }

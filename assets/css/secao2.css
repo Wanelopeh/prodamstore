@@ -1,0 +1,327 @@
+/* Seção 'Por que escolher a Prodam' */
+.secao-porque-prodam {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.secao-porque-prodam h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+
+.secao-porque-prodam h2 strong {
+    font-weight: 700;
+}
+
+/* Container com efeito glass */
+.glass-container {
+    position: relative;
+    padding: 60px 40px;
+    min-height: 500px;
+    border-radius: 20px;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(200, 205, 215, 0.10) 20%,
+            rgba(120, 125, 135, 0.12) 40%,
+            rgba(85, 90, 100, 0.15) 60%,
+            rgba(70, 75, 85, 0.18) 80%,
+            rgba(65, 70, 80, 0.22) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Container dos cards */
+.container-cards {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.row-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    /* reduzido de 30px */
+    margin-bottom: 25px;
+    /* reduzido de 30px */
+}
+
+/* Estilo para os cards com efeito glass */
+.card-glass {
+    width: 14rem;
+    /* reduzido de 14.375rem (230px) para 200px */
+    height: 10rem;
+    /* reduzido de 10.1925rem (163.08px) para 140px */
+    border-radius: 8px;
+    /* reduzido de 10px */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    /* reduzido de 10px 20px */
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Evita que o texto vaze do card */
+}
+
+.card-glass:hover {
+    transform: translateY(-4px);
+    /* reduzido de -5px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 12px rgba(9, 223, 171, 0.2);
+    /* reduzido de 12px 40px e 15px */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo para os ícones */
+.icone-card {
+    width: 50px;
+    /* reduzido de 60px */
+    height: 50px;
+    /* reduzido de 60px */
+    margin-bottom: 15px;
+    /* reduzido de 20px */
+    color: #09DFAB;
+}
+
+
+/* Estilo para o texto dos cards */
+.card-glass p {
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+    /* Reduzido de 1rem para evitar overflow */
+    line-height: 1.2;
+    /* Reduzido de 1.3 para economizar espaço */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limita a 3 linhas */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+/* Media queries para responsividade do container glass */
+@media (max-width: 992px) {
+    .secao-porque-prodam::before {
+        width: min(90%, 800px);
+        /* Reduzido de 95% e 900px */
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-porque-prodam::before {
+        width: min(95%, 600px);
+        /* Reduzido de 98% e 700px */
+    }
+}
+
+@media (max-width: 576px) {
+    .secao-porque-prodam::before {
+        width: 95%;
+        /* Reduzido de 98% */
+        border-radius: 12px;
+        /* Reduzido de 15px */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container-cards {
+        gap: 20px;
+        /* Reduzido de 25px */
+    }
+
+    .row-cards {
+        gap: 20px;
+        /* Reduzido de 25px */
+        margin-bottom: 20px;
+        /* Reduzido de 25px */
+    }
+
+    .card-glass {
+        width: 11.25rem;
+        /* Reduzido para 180px */
+        height: 7.5rem;
+        /* Reduzido para 120px */
+    }
+
+    .card-glass p {
+        font-size: 0.75rem;
+        /* Reduzido de 0.9rem para telas médias */
+        -webkit-line-clamp: 3;
+        /* Mantém 3 linhas */
+    }
+
+    .icone-card {
+        width: 45px;
+        /* Reduzido de 50px */
+        height: 45px;
+        /* Reduzido de 50px */
+        margin-bottom: 12px;
+        /* Reduzido de 15px */
+    }
+}
+
+@media (max-width: 768px) {
+    .glass-container {
+        padding: 40px 30px;
+        min-height: 450px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container-cards {
+        gap: 15px;
+        /* Reduzido de 20px */
+    }
+
+    .row-cards {
+        gap: 15px;
+        /* Reduzido de 20px */
+        margin-bottom: 15px;
+        /* Reduzido de 20px */
+        flex-wrap: wrap;
+    }
+
+    .card-glass {
+        width: 12rem;
+        /* Aumentado de 11.25rem para acomodar melhor o texto */
+        height: 9.5rem;
+        /* Aumentado de 8.5rem para dar mais espaço vertical e evitar truncamento */
+    }
+
+    .card-glass p {
+        font-size: 0.75rem;
+        /* Reduzido de 0.8rem para tablets */
+        -webkit-line-clamp: 3;
+        /* Mantém 3 linhas */
+        line-height: 1.25;
+        /* Aumentado ligeiramente para melhor legibilidade */
+    }
+
+    .secao-porque-prodam h2 {
+        font-size: 1.70rem;
+        /* Mantido o tamanho da fonte */
+        margin-bottom: 30px;
+        /* Reduzido de 45px */
+    }
+
+    .secao-porque-prodam {
+        padding: 2.5rem 1rem;
+        /* Reduzido de 3rem 1.5rem */
+    }
+}
+
+@media (max-width: 576px) {
+    .glass-container {
+        padding: 30px 20px;
+        min-height: 400px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .card-glass {
+        width: 11rem;
+        /* Aumentado de 10rem para acomodar mais texto */
+        height: auto;
+        /* Altura automática para se ajustar ao conteúdo */
+        min-height: 8rem;
+        /* Altura mínima para manter consistência visual */
+        padding: 12px 16px;
+        /* Aumentado de 6px 12px para mais espaço interno */
+    }
+
+    .row-cards {
+        flex-direction: column;
+        /* Cards ficam um embaixo do outro */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .icone-card {
+        width: 40px;
+        /* Reduzido de 45px */
+        height: 40px;
+        /* Reduzido de 45px */
+        margin-bottom: 10px;
+        /* Reduzido de 12px */
+    }
+
+    .secao-porque-prodam {
+        padding: 2rem 0.75rem;
+        /* Reduzido de 2.5rem 1rem */
+    }
+
+    .secao-porque-prodam h2 {
+        margin-bottom: 25px;
+        /* Reduzido de 30px */
+    }
+
+    .card-glass p {
+        font-size: 0.8rem;
+        /* Aumentado de 0.75rem para melhor legibilidade */
+        -webkit-line-clamp: unset;
+        /* Remove a limitação de linhas */
+        line-height: 1.3;
+        /* Aumentado para melhor legibilidade */
+        overflow: visible;
+        /* Permite que o texto seja totalmente visível */
+        display: block;
+        /* Muda de -webkit-box para block para remover truncamento */
+        text-overflow: unset;
+        /* Remove o truncamento com ... */
+    }
+}
+
+/* Media query para telas muito pequenas */
+@media (max-width: 480px) {
+    .glass-container {
+        padding: 25px 15px;
+        min-height: 350px;
+        width: 98%;
+    }
+
+    .secao-porque-prodam {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .secao-porque-prodam h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query para telas grandes */
+@media (min-width: 1200px) {
+    .glass-container {
+        padding: 80px 60px;
+        min-height: 600px;
+        max-width: 1400px;
+    }
+
+    .secao-porque-prodam {
+        padding: 100px 20px;
+    }
+}

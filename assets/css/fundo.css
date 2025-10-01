@@ -1,0 +1,11 @@
+.fundo {
+  position: absolute; /* posiciona em relação ao body */
+  top: 20%;           /* começa a 20% do topo da página */
+  left: 0;
+  width: 100%;
+  height: auto;       /* ou altura específica */
+  z-index: -1;        /* coloca atrás do conteúdo */
+  background-image: url('../img/linhas.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* cobre toda a largura */
+}
