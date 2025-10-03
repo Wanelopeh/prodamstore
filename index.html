@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/secao1.css">
     <link rel="stylesheet" href="assets/css/secao2.css">
     <link rel="stylesheet" href="assets/css/secao3.css">
@@ -19,6 +20,39 @@
     </style>
 </head>
 <body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="assets/img/logo_Prodam.svg" alt="Prodam" class="logo-img">
+                </a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Atas de Registro Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <img src="assets/img/search.png" alt="Buscar" class="search-icon">
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <div class="fundo"></div>
     <!-- Hero section principal -->
@@ -85,8 +119,8 @@
     
     <!-- Seção 'Por que escolher a Prodam' -->
     <section class="secao-porque-prodam">
-        <h2>Por que escolher a <strong>Prodam?</strong></h2>
         <div class="glass-container">
+            <h2>Por que escolher a <strong>Prodam?</strong></h2>
             <div class="container-cards">
                 <div class="row-cards">
                     <!-- Card 1 -->
@@ -144,6 +178,9 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Título duplicado para mobile (entre vídeo e texto) -->
+            <h2 class="titulo-mobile-sobre-nos">Líder <span class="gradiente-texto">global</span> em<br>tecnologia <span class="gradiente-texto2">municipal</span></h2>
             
             <!-- Container glass à direita -->
             <div class="container-glass-sobre-nos">

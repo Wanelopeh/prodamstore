@@ -4,11 +4,12 @@
         .hero {
             width: 100%;
             height: 100vh; /* Ocupa 100% da altura da tela */
-            background: linear-gradient(to bottom,  #09DFAB -0%, #001356 70%, #0f172a44 100% );
+            background: linear-gradient(to bottom,  #09DFAB -0%, #001356 70%, #0f172a 100% );
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: visible; /* Alterado para permitir que os retângulos sejam visíveis */
+            padding-top: 0; /* Removido padding-top pois o header não é mais fixo */
         }
 
         /* Adiciona um elemento de vidro desfocado */
@@ -39,10 +40,10 @@
 
         /* Ícone de vídeo central */
         .icone-video {
-            width: 333px; /* Reduzido para ficar menor que o retângulo 1 */
-            height: 183px; /* Mantendo a proporção original */
-            background-color: #aaa; /* Cor cinza para o ícone de vídeo */
-            border-radius: 8px;
+            width: 400px; /* Aumentado em 20% de 333px */
+            height: 220px; /* Aumentado em 20% de 183px */
+            background-color: #ffffff; /* Cor cinza para o ícone de vídeo */
+            border-radius: 15px;
             position: relative;
             z-index: 10;
             display: flex;
@@ -55,10 +56,10 @@
             content: '';
             width: 0;
             height: 0;
-            border-top: 15px solid transparent; /* Reduzido para o tamanho original */
-            border-bottom: 15px solid transparent; /* Reduzido para o tamanho original */
-            border-left: 25px solid white; /* Reduzido para o tamanho original */
-            margin-left: 5px; /* Reduzido para o tamanho original */
+            border-top: 18px solid transparent; /* Aumentado em 20% de 15px */
+            border-bottom: 18px solid transparent; /* Aumentado em 20% de 15px */
+            border-left: 30px solid rgb(196, 196, 196); /* Aumentado em 20% de 25px */
+            margin-left: 6px; /* Aumentado em 20% de 5px */
         }
 
         /* Retângulos ao redor do centro (camadas) */
@@ -75,23 +76,23 @@
         /* Media query para telas maiores que notebooks de 15 polegadas */
         @media (min-width: 1367px) {
             .retangulo-1 {
-                width: 59.65rem; /* Aumentado em 40% de 42.61rem */
-                height: 36.02rem; /* Aumentado em 40% de 25.73rem */
+                width: 59.06rem; /* Largura aumentada ligeiramente */
+                height: 32.42rem; /* Reduzido em 10% de 36.02rem */
             }
 
             .retangulo-2 {
-                width: 70.76rem; /* Aumentado em 40% de 50.54rem */
-                height: 44.10rem; /* Aumentado em 40% de 31.50rem */
+                width: 70.05rem; /* Largura aumentada ligeiramente */
+                height: 39.69rem; /* Reduzido em 10% de 44.10rem */
             }
 
             .retangulo-3 {
-                width: 81.89rem; /* Aumentado em 40% de 58.49rem */
-                height: 51.21rem; /* Aumentado em 40% de 36.58rem */
+                width: 81.07rem; /* Largura aumentada ligeiramente */
+                height: 46.09rem; /* Reduzido em 10% de 51.21rem */
             }
             
             .retangulo-4 {
-                width: 93.30rem; /* Aumentado em 40% de 66.64rem */
-                height: 60.47rem; /* Aumentado em 40% de 43.19rem */
+                width: 92.37rem; /* Largura aumentada ligeiramente */
+                height: 54.42rem; /* Reduzido em 10% de 60.47rem */
             }
 
             .quadrado-icone {
@@ -101,16 +102,16 @@
             }
 
             .icone-video {
-                width: 448px; /* Reduzido em 20% de 560px */
-                height: 246px; /* Reduzido em 20% de 308px */
+                width: 457px; /* Reduzido em 15% de 538px */
+                height: 251px; /* Reduzido em 15% de 295px */
             }
             
             /* Triângulo de play dentro do ícone de vídeo */
             .icone-video::after {
-                border-top: 25px solid transparent; /* Aumentado em 40% de 18px */
-                border-bottom: 25px solid transparent; /* Aumentado em 40% de 18px */
-                border-left: 42px solid white; /* Aumentado em 40% de 30px */
-                margin-left: 8px; /* Aumentado em 40% de 6px */
+                border-top: 26px solid transparent; /* Reduzido em 15% de 30px */
+                border-bottom: 26px solid transparent; /* Reduzido em 15% de 30px */
+                border-left: 43px solid rgb(102, 102, 102); /* Reduzido em 15% de 50px */
+                margin-left: 9px; /* Reduzido em 15% de 10px */
             }
             
             /* Ajuste dos ícones para telas grandes */
@@ -160,29 +161,29 @@
         }
 
         .retangulo-1 {
-            width: 35.51rem; /* Reduzido para o tamanho original */
-            height: 21.44rem; /* Reduzido para o tamanho original */
+            width: 35.16rem; /* Largura aumentada ligeiramente */
+            height: 19.30rem; /* Reduzido em 10% de 21.44rem */
             border: 2px solid #ffffff;
             border-radius: 16px;
         }
 
         .retangulo-2 {
-            width: 42.12rem; /* Reduzido para o tamanho original */
-            height: 26.25rem; /* Reduzido para o tamanho original */
+            width: 41.70rem; /* Largura aumentada ligeiramente */
+            height: 23.63rem; /* Reduzido em 10% de 26.25rem */
             border: 2px solid #ffffff60;
             border-radius: 16px;
         }
 
         .retangulo-3 {
-            width: 48.74rem; /* Reduzido para o tamanho original */
-            height: 30.48rem; /* Reduzido para o tamanho original */
+            width: 48.26rem; /* Largura aumentada ligeiramente */
+            height: 27.43rem; /* Reduzido em 10% de 30.48rem */
             border: 2px solid #ffffff30;
             border-radius: 16px;
         }
         
         .retangulo-4 {
-            width: 55.53rem; /* Reduzido para o tamanho original */
-            height: 35.99rem; /* Reduzido para o tamanho original */
+            width: 54.98rem; /* Largura aumentada ligeiramente */
+            height: 32.39rem; /* Reduzido em 10% de 35.99rem */
             border: 2px solid #ffffff05;
             border-radius: 16px;
         }
@@ -344,8 +345,8 @@
             }
 
             .icone-video {
-                width: 300px; /* Reduzido para manter proporção com o retângulo 1 */
-                height: 165px; /* Mantendo a proporção original */
+                width: 360px; /* Aumentado em 20% de 300px */
+                height: 198px; /* Aumentado em 20% de 165px */
             }
             
             /* Ajuste do ícone de lápis para tablet */
@@ -404,6 +405,49 @@
             }
         }
 
+        @media (max-width: 576px) {
+            .hero {
+                height: 50vh; /* Reduzido de 100vh para 70vh na versão mobile */
+                margin-bottom: -50px; /* Aproxima da próxima seção */
+                padding-top: 80px; /* Espaço aumentado para mobile */
+            }
+
+            .container-central {
+                padding: 0 20px; /* Mais espaço lateral */
+            }
+
+            .quadrado-icone {
+                width: 28px; /* Ícones um pouco maiores para mobile */
+                height: 28px; /* Ícones um pouco maiores para mobile */
+                font-size: 16px; /* Fonte um pouco maior para mobile */
+            }
+
+            .quadrado-icone img {
+                width: 24px; /* Imagens dos ícones um pouco maiores */
+                height: 24px; /* Imagens dos ícones um pouco maiores */
+            }
+
+            .retangulo-1 {
+                width: 12rem; /* Muito reduzido */
+                height: 8rem; /* Proporcionalmente ajustado */
+            }
+
+            .retangulo-2 {
+                width: 14rem; /* Muito reduzido */
+                height: 9rem; /* Proporcionalmente ajustado */
+            }
+
+            .retangulo-3 {
+                width: 16rem; /* Muito reduzido */
+                height: 10rem; /* Proporcionalmente ajustado */
+            }
+            
+            .retangulo-4 {
+                width: 18rem; /* Muito reduzido */
+                height: 11rem; /* Proporcionalmente ajustado */
+            }
+        }
+
         @media (max-width: 480px) {
             .retangulo-1 {
                 width: 17.04rem; /* Reduzido em 60% de 42.61rem */
@@ -440,8 +484,16 @@
             }
 
             .icone-video {
-                width: 160px; /* Reduzido em 60% de 400px */
-                height: 88px; /* Reduzido em 60% de 220px */
+                width: 240px; /* Aumentado em 20% de 200px */
+                height: 132px; /* Aumentado em 20% de 110px */
+            }
+
+            /* Triângulo de play dentro do ícone de vídeo para mobile */
+            .icone-video::after {
+                border-top: 14px solid transparent; /* Aumentado em 20% de 12px */
+                border-bottom: 14px solid transparent; /* Aumentado em 20% de 12px */
+                border-left: 24px solid rgb(65, 65, 65); /* Aumentado em 20% de 20px */
+                margin-left: 5px; /* Aumentado em 20% de 4px */
             }
 
             /* Ajuste do ícone de lápis para mobile */

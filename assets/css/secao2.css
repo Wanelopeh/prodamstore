@@ -12,6 +12,7 @@
     margin-bottom: 50px;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 .secao-porque-prodam h2 strong {
@@ -21,16 +22,16 @@
 /* Container com efeito glass */
 .glass-container {
     position: relative;
-    padding: 60px 40px;
-    min-height: 500px;
+    padding: 36px 36px; /* Reduzido 10% de 40px para 36px */
+    min-height: 450px; /* Reduzido 10% de 500px para 450px */
     border-radius: 20px;
     background: radial-gradient(circle at center,
-            rgba(255, 255, 255, 0.08) 0%,
-            rgba(200, 205, 215, 0.10) 20%,
-            rgba(120, 125, 135, 0.12) 40%,
-            rgba(85, 90, 100, 0.15) 60%,
-            rgba(70, 75, 85, 0.18) 80%,
-            rgba(65, 70, 80, 0.22) 100%);
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(200, 205, 215, 0.05) 20%,
+            rgba(120, 125, 135, 0.06) 40%,
+            rgba(85, 90, 100, 0.08) 60%,
+            rgba(70, 75, 85, 0.09) 80%,
+            rgba(65, 70, 80, 0.11) 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -38,11 +39,12 @@
         0 4px 20px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     margin: 0 auto;
-    max-width: 1200px;
-    width: 55%;
+    max-width: 1080px; /* Reduzido 10% de 1200px para 1080px */
+    width: 49.5%; /* Reduzido 10% de 55% para 49.5% */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
 }
 
 /* Container dos cards */
@@ -64,15 +66,13 @@
 
 /* Estilo para os cards com efeito glass */
 .card-glass {
-    width: 14rem;
-    /* reduzido de 14.375rem (230px) para 200px */
-    height: 10rem;
-    /* reduzido de 10.1925rem (163.08px) para 140px */
-    border-radius: 8px;
-    /* reduzido de 10px */
+    width: 16.2rem; /* Reduzido 10% de 18rem para 16.2rem (259.2px) */
+    height: 11.7rem; /* Reduzido 10% de 13rem para 11.7rem (187.2px) */
+    border-radius: 12px;
+    /* aumentado de 8px para 12px */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 12px 16px;
-    /* reduzido de 10px 20px */
+    padding: 18px 21.6px; /* Reduzido 10% de 20px 24px para 18px 21.6px */
+    /* aumentado de 12px 16px para 20px 24px */
     text-align: center;
     transition: all 0.3s ease;
     display: flex;
@@ -93,12 +93,10 @@
 
 /* Estilo para os ícones */
 .icone-card {
-    width: 50px;
-    /* reduzido de 60px */
-    height: 50px;
-    /* reduzido de 60px */
-    margin-bottom: 15px;
-    /* reduzido de 20px */
+    width: 63px; /* Reduzido 10% de 70px para 63px */
+    height: 63px; /* Reduzido 10% de 70px para 63px */
+    margin-bottom: 18px; /* Reduzido 10% de 20px para 18px */
+    /* aumentado de 15px para 20px */
     color: #09DFAB;
 }
 
@@ -107,10 +105,10 @@
 .card-glass p {
     color: white;
     font-weight: 400;
-    font-size: 0.9rem;
-    /* Reduzido de 1rem para evitar overflow */
-    line-height: 1.2;
-    /* Reduzido de 1.3 para economizar espaço */
+    font-size: 1.1rem;
+    /* aumentado de 0.9rem para 1.1rem */
+    line-height: 1.4;
+    /* aumentado de 1.2 para 1.4 para melhor legibilidade */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     text-overflow: ellipsis;
@@ -236,62 +234,73 @@
 
 @media (max-width: 576px) {
     .glass-container {
-        padding: 30px 20px;
-        min-height: 400px;
+        padding: 30px 15px;
+        min-height: 500px;
         width: 95%;
         margin: 0 auto;
     }
 
-    .card-glass {
-        width: 11rem;
-        /* Aumentado de 10rem para acomodar mais texto */
-        height: auto;
-        /* Altura automática para se ajustar ao conteúdo */
-        min-height: 8rem;
-        /* Altura mínima para manter consistência visual */
-        padding: 12px 16px;
-        /* Aumentado de 6px 12px para mais espaço interno */
+    .container-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
     }
 
     .row-cards {
+        display: flex;
         flex-direction: column;
-        /* Cards ficam um embaixo do outro */
+        gap: 10px;
+        width: 48%;
+    }
+
+    .card-glass {
+        width: 100%;
+        /* Ocupa toda a largura da coluna */
+        height: 70px;
+        /* Altura reduzida para mobile */
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        /* Ícone ao lado do texto */
         align-items: center;
-        gap: 15px;
+        gap: 8px;
     }
 
     .icone-card {
-        width: 40px;
-        /* Reduzido de 45px */
-        height: 40px;
-        /* Reduzido de 45px */
-        margin-bottom: 10px;
-        /* Reduzido de 12px */
+        width: 24px;
+        /* Ícone bem pequeno para mobile */
+        height: 24px;
+        margin-bottom: 0;
+        /* Remove margin-bottom pois agora está ao lado */
+        flex-shrink: 0;
+        /* Impede que o ícone encolha */
+    }
+
+    .card-glass p {
+        font-size: 0.65rem;
+        /* Fonte bem pequena para mobile */
+        line-height: 1.2;
+        margin: 0;
+        -webkit-line-clamp: 3;
+        /* Limita a 3 linhas */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        /* Ocupa o espaço restante */
+        text-align: left;
+        /* Alinha o texto à esquerda */
     }
 
     .secao-porque-prodam {
         padding: 2rem 0.75rem;
-        /* Reduzido de 2.5rem 1rem */
     }
 
     .secao-porque-prodam h2 {
         margin-bottom: 25px;
-        /* Reduzido de 30px */
-    }
-
-    .card-glass p {
-        font-size: 0.8rem;
-        /* Aumentado de 0.75rem para melhor legibilidade */
-        -webkit-line-clamp: unset;
-        /* Remove a limitação de linhas */
-        line-height: 1.3;
-        /* Aumentado para melhor legibilidade */
-        overflow: visible;
-        /* Permite que o texto seja totalmente visível */
-        display: block;
-        /* Muda de -webkit-box para block para remover truncamento */
-        text-overflow: unset;
-        /* Remove o truncamento com ... */
+        font-size: 1.4rem;
     }
 }
 
@@ -313,12 +322,109 @@
     }
 }
 
+/* Media query específica para tablet (820x1180) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .glass-container {
+        padding: 50px 40px;
+        min-height: 550px;
+        width: 85%; /* Aumentado de 90% para melhor aproveitamento da tela */
+        max-width: 900px;
+    }
+
+    .secao-porque-prodam {
+        padding: 70px 20px;
+    }
+
+    .secao-porque-prodam h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 25px;
+        align-items: start;
+    }
+
+    .row-cards {
+        display: contents; /* Remove o comportamento de linha para permitir grid */
+    }
+
+    .card-glass {
+        width: 13rem; /* Aumentado para melhor legibilidade */
+        height: 10rem; /* Aumentado para acomodar melhor o texto */
+        padding: 20px;
+    }
+
+    .card-glass p {
+        font-size: 0.75rem; /* Diminuído de 0.85rem para melhor ajuste */
+        line-height: 1.3;
+        -webkit-line-clamp: 4; /* Permite mais linhas */
+    }
+
+    .icone-card {
+        width: 50px; /* Aumentado para melhor visibilidade */
+        height: 50px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Media query específica para proporção 1075x1180 */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .glass-container {
+        padding: 50px 45px;
+        min-height: 500px;
+        width: 90%; /* Container mais largo */
+        max-width: 1000px;
+    }
+
+    .secao-porque-prodam {
+        padding: 80px 20px;
+    }
+
+    .secao-porque-prodam h2 {
+        font-size: 2.1rem;
+        margin-bottom: 35px;
+    }
+
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+    .row-cards {
+        display: contents;
+    }
+
+    .card-glass {
+        width: 12rem;
+        height: 9rem;
+        padding: 18px;
+    }
+
+    .card-glass p {
+        font-size: 0.7rem; /* Fonte menor */
+        line-height: 1.25;
+        -webkit-line-clamp: 4;
+    }
+
+    .icone-card {
+        width: 40px; /* Ícones menores */
+        height: 40px;
+        margin-bottom: 12px;
+    }
+}
+
 /* Media query para telas grandes */
 @media (min-width: 1200px) {
     .glass-container {
-        padding: 80px 60px;
-        min-height: 600px;
-        max-width: 1400px;
+        padding: 54px 54px; /* Reduzido 10% de 60px para 54px */
+        min-height: 540px; /* Reduzido 10% de 600px para 540px */
+        width: 72%; /* Reduzido 10% de 80% para 72% */
+        max-width: 1260px; /* Reduzido 10% de 1400px para 1260px */
     }
 
     .secao-porque-prodam {

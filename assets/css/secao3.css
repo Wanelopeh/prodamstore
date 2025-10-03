@@ -227,6 +227,10 @@
     }
 
     .container-glass-sobre-nos {
+        backdrop-filter: blur(0px);
+        box-shadow: none;
+        border: 0;
+        background: none;
         padding: 25px;
         order: 2; /* Container glass fica em segundo lugar dentro do container */
     }
@@ -240,6 +244,11 @@
     }
 }
 
+/* Título duplicado para mobile - oculto por padrão */
+.titulo-mobile-sobre-nos {
+    display: none !important;
+}
+
 @media (max-width: 576px) {
     .secao-sobre-nos {
         padding: 30px 10px;
@@ -249,8 +258,34 @@
     }
 
     .secao-sobre-nos h2 {
-        font-size: 1.75rem;
-        order: 2; /* Título fica em segundo lugar */
+        display: none; /* Oculta o título original na versão mobile */
+    }
+    
+    .titulo-mobile-sobre-nos {
+        display: block !important; /* Mostra o título duplicado na versão mobile */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: center;
+        margin: 30px 0;
+        line-height: 1.2;
+        order: 2; /* Título fica em segundo lugar (entre vídeo e texto) */
+        letter-spacing: -0.05em;
+        padding: 20px 0;
+    }
+    
+    .titulo-mobile-sobre-nos .gradiente-texto {
+        font-weight: 900;
+        font-size: 2rem;
+        font-style: italic;
+        background: linear-gradient(135deg, #3ddabf 0%, #37e4b8 25%, #3ecfbc 75%, #07aa95 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        letter-spacing: -0.05em;
+        padding-right: 0.2em;
     }
 
     .gradiente-texto, .gradiente-texto2 {
@@ -271,12 +306,17 @@
     }
 
     .container-glass-sobre-nos {
+        backdrop-filter: blur(0px);
+        box-shadow: none;
+        border: 0;
+        background: none;
         padding: 20px;
-        order: 2; /* Container glass fica em segundo lugar dentro do container */
+        order: 3; /* Container glass fica em terceiro lugar dentro do container */
     }
 
     .container-glass-sobre-nos h3 {
         font-size: 22px;
+        text-align: center; /* Centraliza o texto do h3 na versão mobile */
     }
 
     .container-glass-sobre-nos p {

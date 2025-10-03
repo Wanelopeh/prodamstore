@@ -1,0 +1,119 @@
+/* Header Styles */
+.header {
+    position: relative; /* Alterado de fixed para relative */
+    width: 100vw;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.034);
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 25px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Torna o logo branco */
+}
+
+/* Menu Navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.80rem;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Ícone de busca */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(9, 223, 171, 0.6));
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 25px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 10px 0;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .search-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -11,9 +11,35 @@ body {
     padding: 0;
     min-height: 200vh;
     /* só pra poder rolar */
-    background: linear-gradient(to bottom, #0f172a, #081540 30%, #081540 70%, #09DFAB);
+    background: linear-gradient(to bottom, #0f172a, #081540 20%, #081540 40%, #09dfaa 100%);
     background-attachment: fixed;
     position: relative;
+    overflow-x: hidden;
+    /* Previne overflow horizontal */
+}
+
+/* Adiciona a imagem linhas.png no fundo da segunda seção */
+body::after {
+    content: '';
+    position: absolute;
+    top: 65vh;
+    right: 0;
+    width: min(1000px, 100vw);
+    height: 1200px;
+    background-image: url('../img/linhass.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Oculta a imagem de fundo na versão mobile */
+@media (max-width: 576px) {
+    body::after {
+        display: none;
+    }
 }
  
 
