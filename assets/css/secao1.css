@@ -40,18 +40,99 @@
 
         /* Ícone de vídeo central */
         .icone-video {
-            width: 400px; /* Aumentado em 20% de 333px */
+            width: 390px; /* Aumentado em 20% de 333px */
             height: 220px; /* Aumentado em 20% de 183px */
-            background-color: #ffffff; /* Cor cinza para o ícone de vídeo */
+            background-image: url('https://portal.prodam.sp.gov.br/documents/1748053/1749629/somos+a+prodam.png/0477d791-cb6e-5c1d-3d22-c15fc47e91dc');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 15px;
             position: relative;
             z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+            overflow: hidden;
         }
 
-        /* Triângulo de play dentro do ícone de vídeo */
+        /* YouTube video wrapper dentro do icone-video */
+        .icone-video .youtube-video-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Video thumbnail (imagem exibida enquanto carrega) */
+        .icone-video .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .icone-video .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Play button overlay */
+        .icone-video .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .icone-video .play-button {
+            width: 60px;
+            height: 60px;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .icone-video .play-button:hover {
+            opacity: 1;
+        }
+
+        /* Iframe do YouTube (quando o vídeo for carregado) */
+        .icone-video .youtube-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            object-fit: cover; /* Garante que o vídeo preencha todo o container */
+        }
+
+        /* Ajuste específico para o iframe do YouTube ocupar toda a área */
+        .icone-video .youtube-video-wrapper iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        /* Remove o triângulo de play original quando há o wrapper do YouTube */
+        .icone-video:has(.youtube-video-wrapper)::after {
+            display: none;
+        }
+
+        /* Triângulo de play dentro do ícone de vídeo (fallback) */
         .icone-video::after {
             content: '';
             width: 0;
@@ -102,8 +183,19 @@
             }
 
             .icone-video {
-                width: 457px; /* Reduzido em 15% de 538px */
-                height: 251px; /* Reduzido em 15% de 295px */
+                width: 446px;
+                height: 251px;
+            }
+
+            /* YouTube video wrapper para telas grandes */
+            .icone-video .youtube-video-wrapper {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                overflow: hidden;
             }
             
             /* Triângulo de play dentro do ícone de vídeo */
@@ -309,6 +401,14 @@
             margin: 80px 0 0 -22px; /* Reduzido para o tamanho original */
         }
         /* Responsividade */
+        /* Media query específica para tablet (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero {
+                height: 55vh; /* Altura da hero ainda mais reduzida para tablet */
+                padding-top: 15px; /* Padding ainda mais reduzido para tablet */
+            }
+        }
+
         @media (max-width: 768px) {
             .retangulo-1 {
                 width: 31.96rem; /* Aumentado em 20% de 26.63rem */
@@ -347,6 +447,17 @@
             .icone-video {
                 width: 360px; /* Aumentado em 20% de 300px */
                 height: 198px; /* Aumentado em 20% de 165px */
+            }
+
+            /* YouTube video wrapper para tablet */
+            .icone-video .youtube-video-wrapper {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                overflow: hidden;
             }
             
             /* Ajuste do ícone de lápis para tablet */
@@ -407,9 +518,9 @@
 
         @media (max-width: 576px) {
             .hero {
-                height: 50vh; /* Reduzido de 100vh para 70vh na versão mobile */
-                margin-bottom: -50px; /* Aproxima da próxima seção */
-                padding-top: 80px; /* Espaço aumentado para mobile */
+                height: 40vh; /* Reduzido de 50vh para 40vh na versão mobile */
+                margin-bottom: 0; /* Removido margin negativo para evitar sobreposição */
+                padding-top: 40px; /* Reduzido de 80px para 40px na versão mobile */
             }
 
             .container-central {
@@ -484,8 +595,19 @@
             }
 
             .icone-video {
-                width: 240px; /* Aumentado em 20% de 200px */
-                height: 132px; /* Aumentado em 20% de 110px */
+                width: 235px;
+                height: 132px;
+            }
+
+            /* YouTube video wrapper para mobile */
+            .icone-video .youtube-video-wrapper {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                overflow: hidden;
             }
 
             /* Triângulo de play dentro do ícone de vídeo para mobile */

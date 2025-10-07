@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/secao3.css">
     <link rel="stylesheet" href="assets/css/secao4.css">
     <link rel="stylesheet" href="assets/css/fundo.css">
+    <link rel="stylesheet" href="assets/css/secao5.css">
 
     <style>
         /* Styles moved to body.css */
@@ -26,10 +27,17 @@
         <div class="nav-container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <img src="assets/img/logo_Prodam.svg" alt="Prodam" class="logo-img">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749629/logo_Prodam.png/4a643fcc-7f09-8e10-56c6-7b9a2692917a" alt="Prodam" class="logo-img">
                 </a>
                 
-                <ul class="nav-menu">
+                <!-- Botão hamburger para mobile -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link">Início</a>
                     </li>
@@ -48,7 +56,7 @@
                 </ul>
                 
                 <div class="nav-actions">
-                    <img src="assets/img/search.png" alt="Buscar" class="search-icon">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/search.png/9087100c-9190-57e1-dbe2-639c8199c1f6" alt="Buscar" class="search-icon">
                 </div>
             </nav>
         </div>
@@ -59,57 +67,63 @@
     <section class="hero">
         <div class="container-central">
             <!-- Ícone de vídeo central -->
-            <div class="icone-video"></div>
+            <div class="icone-video">
+                <div class="youtube-video-wrapper" data-video-id="YPDnUQBpJXg">
+                    <div class="video-thumbnail">
+                        <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749629/somos+a+prodam.png/0477d791-cb6e-5c1d-3d22-c15fc47e91dc" alt="Somos a Prodam" class="thumbnail-image">
+                    </div>
+                </div>
+            </div>
             
             <!-- Retângulos ao redor (camadas) -->
             <div class="retangulo retangulo-1">
                 <!-- Ícone de notebook fixo na parte superior do retangulo 1 -->
                 <div class="quadrado-icone icone-notebook-retangulo1">
-                    <img src="assets/img/notebook_hero.svg" alt="Ícone de Notebook" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+80.png/1cea4772-5bc8-88df-78b9-bc98d810f641" alt="Ícone de Notebook" width="40" height="40">
                 </div>
                 <!-- Ícone de ramificação fixo na parte superior direita do retangulo 1 -->
                 <div class="quadrado-icone icone-ramificacao-retangulo1">
-                    <img src="assets/img/ramificacao_hero.svg" alt="Ícone de Ramificação" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+83.png/70d1730e-f772-5072-905c-cf86bb7893d5" alt="Ícone de Ramificação" width="40" height="40">
                 </div>
                 <!-- Ícone de banco de dados fixo na parte inferior do retangulo 1 -->
                 <div class="quadrado-icone icone-bancodedados-retangulo1">
-                    <img src="assets/img/bancodedados_hero.svg" alt="Ícone de Banco de Dados" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/bancodedados_hero.png/9d0289bc-92f7-4a68-fde5-008d52032728" alt="Ícone de Banco de Dados" width="40" height="40">
                 </div>
                 <!-- Ícone de partículas fixo na lateral esquerda do retangulo 1 -->
                 <div class="quadrado-icone icone-particulas-retangulo1">
-                    <img src="assets/img/particulas_hero.svg" alt="Ícone de Partículas" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+82.png/715527be-8570-41d8-f6bf-94a3d5c388d1" alt="Ícone de Partículas" width="40" height="40">
                 </div>
             </div>
             <div class="retangulo retangulo-2">
                 <!-- Ícone de nuvem fixo na parte superior do retangulo 2 -->
                 <div class="quadrado-icone icone-nuvem-retangulo2">
-                    <img src="assets/img/nuvem_hero.svg" alt="Ícone de Nuvem" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+81.png/575e6900-ced5-f23b-3ae8-c6a900f83367" alt="Ícone de Nuvem" width="40" height="40">
                 </div>
                 <!-- Ícone de pessoa fixo na parte esquerda do retangulo 2 -->
                 <div class="quadrado-icone icone-pessoa-retangulo2">
-                    <img src="assets/img/pessoa_hero.svg" alt="Ícone de Pessoa" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+93.png/8d3ce775-b7f0-5cf6-7379-57cf9647969a" alt="Ícone de Pessoa" width="40" height="40">
                 </div>
                 <!-- Ícone de prédio fixo na parte inferior do retangulo 2 -->
                 <div class="quadrado-icone icone-predio-retangulo2">
-                    <img src="assets/img/predios_hero.svg" alt="Ícone de Prédio" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+127.png/3c77b1a3-8e9d-04ad-75b3-4f122e1e5f6b" alt="Ícone de Prédio" width="40" height="40">
                 </div>
             </div>
             <div class="retangulo retangulo-3">
                 <!-- Ícone de lápis fixo na parte superior esquerda do retangulo 3 -->
                 <div class="quadrado-icone icone-lapis-retangulo3">
-                    <img src="assets/img/lapis_hero.svg" alt="Ícone de lápis" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+283.png/a95e4e87-09e7-dae5-1d70-23c98c66f517" alt="Ícone de lápis" width="40" height="40">
                 </div>
                 <!-- Ícone de telefone fixo na lateral direita do retangulo 3 -->
                 <div class="quadrado-icone icone-telefone-retangulo3">
-                    <img src="assets/img/telefone_hero.svg" alt="Ícone de Telefone" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+84.png/4d0d04df-7c46-aeca-fa06-940c726c0b98" alt="Ícone de Telefone" width="40" height="40">
                 </div>
                 <!-- Ícone de olho fixo na parte inferior direita do retangulo 3 -->
                 <div class="quadrado-icone icone-olho-retangulo3">
-                    <img src="assets/img/olho_hero.svg" alt="Ícone de Olho" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+85.png/b06036a1-f735-64c4-5d43-cf3410e9c7d4" alt="Ícone de Olho" width="40" height="40">
                 </div>
                 <!-- Ícone de planilhas fixo na lateral esquerda do retangulo 3 -->
                 <div class="quadrado-icone icone-planilhas-retangulo3">
-                    <img src="assets/img/planilhas_hero.svg" alt="Ícone de Planilha" width="40" height="40">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/Group+123.png/3ffbd497-2dae-45e3-4269-3669c0e3866d" alt="Ícone de Planilha" width="40" height="40">
                 </div>
             </div>
             <div class="retangulo retangulo-4"></div>
@@ -125,19 +139,19 @@
                 <div class="row-cards">
                     <!-- Card 1 -->
                     <div class="card-glass">
-                        <img class="icone-card" src="assets/img/school.svg" alt="Ícone escola">
+                        <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/school.png/409a59d4-9835-1b4e-171d-03632e5038fb" alt="Ícone escola">
                         <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
                     </div>
                     
                     <!-- Card 2 -->
                     <div class="card-glass">
-                        <img class="icone-card" src="assets/img/currency_exchange.svg" alt="Ícone escola">
+                        <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/currency_exchange.png/6c34fb4e-3395-1c4c-f44b-f3004e56e874" alt="Ícone escola">
                         <p>Economia de <strong>tempo</strong><br> e <strong>recursos</strong> na <br>contratação</p>
                     </div>
                     
                     <!-- Card 3 -->
                     <div class="card-glass">
-                       <img class="icone-card" src="assets/img/rule_settings.svg" alt="Ícone setas">
+                       <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/rule_settings.png/03dced81-2464-9ae6-57e4-43f4c879f2bf" alt="Ícone setas">
                         <p><strong>Gestão completa</strong><br> dos ambientes e<br> serviços</p>
                     </div>
                 </div>
@@ -145,19 +159,19 @@
                 <div class="row-cards">
                     <!-- Card 4 -->
                     <div class="card-glass">
-                        <img class="icone-card" src="assets/img/editor_choice.svg" alt="Ícone de medalha">
+                        <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/editor_choice.png/b9769b21-3e0e-28fb-73ed-bf7ece141dc6" alt="Ícone de medalha">
                         <p>Soluções testadas,<br><strong>certificadas</strong> e <strong>prontas</strong><br> para o uso</p>
                     </div>
                     
                     <!-- Card 5 -->
                     <div class="card-glass">
-                        <img class="icone-card" src="assets/img/handshake.svg" alt="Ícone de aperto de mão">
+                        <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/handshake.png/449e1cef-31eb-f55a-387d-da68b07b255e" alt="Ícone de aperto de mão">
                         <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
                     </div>
                     
                     <!-- Card 6 -->
                     <div class="card-glass">
-                        <img class="icone-card" src="assets/img/admin_panel_settings.svg" alt="Ícone de escudo">
+                        <img class="icone-card" src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/admin_panel_settings.png/c64ba48e-e029-015d-521d-8ec78975cd4f" alt="Ícone de escudo">
                         <p>Conformidade com <br> <strong>LGPD</strong> e segurança <br> cibernética </p>
                     </div>
                 </div>
@@ -171,10 +185,19 @@
         <div class="container-sobre-nos">
             <!-- Vídeo à esquerda -->
             <div class="video-container">
-                <div class="youtube-video-wrapper" data-video-id="dQw4w9WgXcQ">
-                    <img src="assets/img/somos a prodam.png" alt="Thumbnail do vídeo" class="video-thumbnail">
+                <div class="youtube-video-wrapper-sobre-nos" data-video-id="YPDnUQBpJXg">
+                    <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749629/somos+a+prodam.png/0477d791-cb6e-5c1d-3d22-c15fc47e91dc" alt="Thumbnail do vídeo" class="video-thumbnail">
                     <div class="play-button-overlay">
-                        <img src="assets/img/play_circle.png" alt="Play" class="play-button">
+                        <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/play_circle.png/0856acfa-1785-c860-b1cd-5e93b723b91c" alt="Play" class="play-button">
+                    </div>
+                    <!-- Overlay para "Assistir novamente" -->
+                    <div class="replay-overlay-sobre-nos">
+                        <div class="replay-content-sobre-nos">
+                            <button class="btn-primario replay-button-sobre-nos">
+                                <div class="replay-icon-sobre-nos"></div>
+                                <span class="replay-text-sobre-nos">Assistir novamente</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,10 +225,10 @@
                         <h2>Office 365</h2>
                         <p>Produtividade, colaboração integrada e segurança. Com suporte especializado e escalabilidade em nuvem, otimiza custos e acelera a transformação digital.</p>
                         <ul class="bullet-points">
-                            <li><img src="assets/img/check.png" alt="Check" class="bullet-icon">Eficiência pública</li>
-                            <li><img src="assets/img/check.png" alt="Check" class="bullet-icon">Escalabilidade digital</li>
-                            <li><img src="assets/img/check.png" alt="Check" class="bullet-icon">Suporte especializado</li>
-                            <li><img src="assets/img/check.png" alt="Check" class="bullet-icon">Colaboração integrada</li>
+                            <li><img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/check.png/a5c68f78-7ab0-5395-d155-8655695b19a8" alt="Check" class="bullet-icon">Eficiência pública</li>
+                            <li><img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/check.png/a5c68f78-7ab0-5395-d155-8655695b19a8" alt="Check" class="bullet-icon">Escalabilidade digital</li>
+                            <li><img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/check.png/a5c68f78-7ab0-5395-d155-8655695b19a8" alt="Check" class="bullet-icon">Suporte especializado</li>
+                            <li><img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/check.png/a5c68f78-7ab0-5395-d155-8655695b19a8" alt="Check" class="bullet-icon">Colaboração integrada</li>
                         </ul>
                         <div class="slide-botoes">
                             <button class="btn-primario">Ver Detalhes</button>
@@ -215,7 +238,7 @@
                     
                     <!-- Imagem à direita -->
                     <div class="slide-imagem">
-                        <img src="assets/img/OFFICE_CLOUD-min 2.png" alt="Office Cloud">
+                        <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749629/OFFICE_CLOUD-min+2.png/a59e9b8c-6f74-47e5-2214-b6de334a2212" alt="Office Cloud">
                     </div>
                 </div>
             </div>
@@ -265,10 +288,378 @@
         </div>
     </section>
 
+        <!-- Seção 'Por que escolher a Prodam' -->
+    <section class="secao-porque-prodam">
+        <div class="glass-container">
+            <h2>Por que escolher a <strong>Prodam?</strong></h2>
+            <div class="container-cards">
+                <div class="row-cards">
+                    <!-- Card 1 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/school.svg" alt="Ícone escola">
+                        <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/currency_exchange.svg" alt="Ícone escola">
+                        <p>Economia de <strong>tempo</strong><br> e <strong>recursos</strong> na <br>contratação</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="card-glass">
+                       <img class="icone-card" src="assets/img/rule_settings.svg" alt="Ícone setas">
+                        <p><strong>Gestão completa</strong><br> dos ambientes e<br> serviços</p>
+                    </div>
+                </div>
+                
+                <div class="row-cards">
+                    <!-- Card 4 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/editor_choice.svg" alt="Ícone de medalha">
+                        <p>Soluções testadas,<br><strong>certificadas</strong> e <strong>prontas</strong><br> para o uso</p>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/handshake.svg" alt="Ícone de aperto de mão">
+                        <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/admin_panel_settings.svg" alt="Ícone de escudo">
+                        <p>Conformidade com <br> <strong>LGPD</strong> e segurança <br> cibernética </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Seção 'Por que escolher a Prodam' -->
+    <section class="secao-porque-prodam">
+        <div class="glass-container">
+            <h2>Por que escolher a <strong>Prodam?</strong></h2>
+            <div class="container-cards">
+                <div class="row-cards">
+                    <!-- Card 1 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/school.svg" alt="Ícone escola">
+                        <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/currency_exchange.svg" alt="Ícone escola">
+                        <p>Economia de <strong>tempo</strong><br> e <strong>recursos</strong> na <br>contratação</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="card-glass">
+                       <img class="icone-card" src="assets/img/rule_settings.svg" alt="Ícone setas">
+                        <p><strong>Gestão completa</strong><br> dos ambientes e<br> serviços</p>
+                    </div>
+                </div>
+                
+                <div class="row-cards">
+                    <!-- Card 4 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/editor_choice.svg" alt="Ícone de medalha">
+                        <p>Soluções testadas,<br><strong>certificadas</strong> e <strong>prontas</strong><br> para o uso</p>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/handshake.svg" alt="Ícone de aperto de mão">
+                        <p>Mais de <strong>cinco décadas</strong><br> como referência em <br> inovação</p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="card-glass">
+                        <img class="icone-card" src="assets/img/admin_panel_settings.svg" alt="Ícone de escudo">
+                        <p>Conformidade com <br> <strong>LGPD</strong> e segurança <br> cibernética </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="secao-depoimentos">
+        <h2>Confira o que <strong>nossos clientes</strong> dizem</h2>
+        
+        <div class="depoimentos-carrossel-container">
+            <!-- Slide 1 - Dois depoimentos -->
+            <div class="depoimentos-slide depoimentos-slide-ativo" data-slide="1">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 1 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>O produto superou todas as expectativas. A qualidade é excelente, o desempenho é consistente e cumpre exatamente o que promete. A experiência de uso foi prática, eficiente e agradável. Recomendo fortemente para quem busca uma solução confiável e de alto padrão.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Depoimento 2 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>O produto superou todas as expectativas. A qualidade é excelente, o desempenho é consistente e cumpre exatamente o que promete. A experiência de uso foi prática, eficiente e agradável. Recomendo fortemente para quem busca uma solução confiável e de alto padrão.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 - Dois depoimentos -->
+            <div class="depoimentos-slide" data-slide="2">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 3 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>Excelente solução tecnológica que transformou nossa operação. A implementação foi rápida e o suporte técnico é excepcional. Definitivamente uma escolha acertada para nossa organização.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Depoimento 4 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>A plataforma é intuitiva e robusta. Conseguimos otimizar nossos processos significativamente. A equipe da Prodam demonstrou profissionalismo e expertise em todas as etapas do projeto.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 - Dois depoimentos -->
+            <div class="depoimentos-slide" data-slide="3">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 5 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>Inovação e qualidade em cada detalhe. A solução atendeu perfeitamente nossas necessidades específicas e superou nossas expectativas de performance e confiabilidade.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Depoimento 6 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>Parceria estratégica que gerou resultados excepcionais. A tecnologia da Prodam é de ponta e o atendimento é personalizado. Recomendamos sem hesitação.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 - Depoimento individual (mobile) -->
+            <div class="depoimentos-slide depoimentos-slide-mobile" data-slide="4">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 4 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>A plataforma é intuitiva e robusta. Conseguimos otimizar nossos processos significativamente. A equipe da Prodam demonstrou profissionalismo e expertise em todas as etapas do projeto.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Depoimento individual (mobile) -->
+            <div class="depoimentos-slide depoimentos-slide-mobile" data-slide="5">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 5 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>Inovação e qualidade em cada detalhe. A solução atendeu perfeitamente nossas necessidades específicas e superou nossas expectativas de performance e confiabilidade.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6 - Depoimento individual (mobile) -->
+            <div class="depoimentos-slide depoimentos-slide-mobile" data-slide="6">
+                <div class="depoimentos-content">
+                    <!-- Depoimento 6 -->
+                    <div class="depoimento-card glass-depoimento">
+                        <div class="depoimento-header">
+                            <img src="https://portal.prodam.sp.gov.br/documents/1748053/1749895/depoimentos.png/0fa22732-21e2-e6b2-27b6-534bb34f707e" alt="Avatar" class="depoimento-avatar">
+                            <div class="depoimento-info">
+                                <h4>Nome cliente</h4>
+                                <p>Cargo cliente / <strong>Órgão cliente</strong></p>
+                            </div>
+                        </div>
+                        <div class="depoimento-texto">
+                            <p>Parceria estratégica que gerou resultados excepcionais. A tecnologia da Prodam é de ponta e o atendimento é personalizado. Recomendamos sem hesitação.</p>
+                        </div>
+                        <div class="depoimento-avaliacao">
+                            <span>Avaliação</span>
+                            <div class="estrelas">
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                                <span class="estrela">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navegação do carrossel de depoimentos -->
+        <div class="depoimentos-navegacao">
+            <div class="depoimentos-indicadores">
+                <span class="depoimento-indicador ativo" onclick="depoimentoSlideAtual(1)"></span>
+                <span class="depoimento-indicador" onclick="depoimentoSlideAtual(2)"></span>
+                <span class="depoimento-indicador" onclick="depoimentoSlideAtual(3)"></span>
+                <span class="depoimento-indicador depoimento-indicador-mobile" onclick="depoimentoSlideAtual(4)"></span>
+                <span class="depoimento-indicador depoimento-indicador-mobile" onclick="depoimentoSlideAtual(5)"></span>
+                <span class="depoimento-indicador depoimento-indicador-mobile" onclick="depoimentoSlideAtual(6)"></span>
+            </div>
+        </div>
+    </section>
+
     <!-- JavaScript do Carrossel -->
     <script src="assets/js/carrossel.js"></script>
+    <script src="assets/js/depoimentos-carrossel.js"></script>
     
     <!-- JavaScript do YouTube Player -->
     <script src="assets/js/youtube-player.js"></script>
+    
+    <!-- JavaScript do YouTube Player - Seção Sobre Nós -->
+    <script src="assets/js/youtube-player-sobre-nos.js"></script>
+    
+    <!-- JavaScript do Menu Mobile -->
+    <script src="assets/js/mobile-menu.js"></script>
 </body>
 </html>

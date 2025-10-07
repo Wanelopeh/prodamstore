@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;       /* ou altura específica */
   z-index: -1;        /* coloca atrás do conteúdo */
-  background-image: url('../img/linhas.png');
+  background-image: url('https://portal.prodam.sp.gov.br/documents/1748053/1749629/linhass.png/b6d7a4bb-2a38-fcc5-3605-36d3efa9086c');
   background-repeat: no-repeat;
   background-size: cover; /* cobre toda a largura */
 }
